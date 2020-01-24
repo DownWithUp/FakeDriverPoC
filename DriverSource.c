@@ -36,15 +36,15 @@ NTSTATUS DriverUnload(PDRIVER_OBJECT DriverObject)
 
 NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath) 
 {
-  OBJECT_ATTRIBUTES	objDriver;
-  UNICODE_STRING		usFakeDriver;
-  UNICODE_STRING		usFakeDevice;
-  PDRIVER_OBJECT		pFakeDriver;
-  PDEVICE_OBJECT		pFakeDevice;
-  HANDLE				    hNewDriver;
-  PVOID				      pFunctionPool;
-  PVOID				      pIofCompleteRequest;
-  ULONG				      ulObjectSize;
+  OBJECT_ATTRIBUTES objDriver;
+  UNICODE_STRING    usFakeDriver;
+  UNICODE_STRING    usFakeDevice;
+  PDRIVER_OBJECT    pFakeDriver;
+  PDEVICE_OBJECT    pFakeDevice;
+  HANDLE            hNewDriver;
+  PVOID             pFunctionPool;
+  PVOID             pIofCompleteRequest;
+  ULONG             ulObjectSize;
   UNREFERENCED_PARAMETER(RegistryPath);
 
   DriverObject->DriverUnload = &DriverUnload;
